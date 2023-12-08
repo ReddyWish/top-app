@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  border: 1px solid var(--gray-light);
+  border-radius: 5px;
+  padding: 10px;
+  gap: 12px;
+}
+
+.image {
+  position: relative;
+  height: 20rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topicAndDate {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+
+.topic {
+  color: #4B4B4B
+}
+
+.date {
+  color: #6E6E6E
+}
+
+.text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.duration {
+  color: #6E6E6E
+}
+
+.button {
+  color: dodgerblue;
+  width: 7.6rem;
+  text-align: end;
+  border: none;
+  background-color: transparent;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
