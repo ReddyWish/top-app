@@ -1,13 +1,18 @@
+'use client';
+
 import {Htag} from "@/components";
 import {Button} from "@/components";
 import {Paragraph} from "@/components";
 import {Tag} from "@/components";
 import {Card} from "@/components";
+import {Rating} from "@/components";
+import {useEffect, useState} from "react";
 
 export default function Home() {
+  const [rating, setRating] = useState<number>(4);
+
   return (
     <main>
-      <Htag tag='h3'>Hello</Htag>
       <Button appearance='primary' arrow='right'>Button</Button>
       <Button appearance='ghost' arrow='down'>Button</Button>
       <Paragraph size='large'>Large paragraph</Paragraph>
@@ -17,6 +22,7 @@ export default function Home() {
         title='Как работать с CSS Grid'
         date='1 month ago'
         topic='Front-end'/>
+      <Rating rating={rating} isEditable={true} setRating={setRating}/>
     </main>
   );
 }
