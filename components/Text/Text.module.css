@@ -1,0 +1,26 @@
+.paragraph {
+  margin: 0;
+}
+
+.xs {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.s {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #6E6E6E;
+}
+
+.m {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  color: #4B4B4B
+}
+
+.l {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  color: #6E6E6E;
+}
