@@ -1,15 +1,44 @@
 'use client';
-
-import {Htag} from "@/components";
 import {Button} from "@/components";
 import {Paragraph} from "@/components";
 import {Tag} from "@/components";
 import {Card} from "@/components";
 import {Rating} from "@/components";
+import {Like} from "@/components";
 import {useEffect, useState} from "react";
+import {log} from "util";
 
 export default function Home() {
+  const POST_URL = 'https://jsonplaceholder.typicode.com/posts/1'; // 1 for example
+
   const [rating, setRating] = useState<number>(4);
+  const [click, setClick] = useState<boolean>(false);
+  const [like, setLike] = useState<boolean>(false);
+
+  console.log(!like ? 'post disliked' : 'post liked'); // check the updating state
+
+  const likeThePost = async () => {
+    try {
+      const res = await fetch(POST_URL, {method: 'PATCH'});
+
+      if (res.ok) {
+        setLike(prev => !prev);
+        setClick(prev => !prev);
+
+      } else {
+        throw new Error('Failed to like the post');
+      }
+    } catch (e) {
+      window.alert('Something went wrong, try it later please');
+      console.error('Something went wrong, try it later please');
+    }
+  };
+
+  useEffect(() => {
+    if (click) {
+      likeThePost();
+    }
+  }, [click]);
 
   return (
     <main>
@@ -23,6 +52,7 @@ export default function Home() {
         date='1 month ago'
         topic='Front-end'/>
       <Rating rating={rating} isEditable={true} setRating={setRating}/>
+      <Like liked={like} location='page' onClick={() => setClick(prev => !prev)}/>
     </main>
   );
 }

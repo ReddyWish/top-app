@@ -45,6 +45,12 @@
   overflow: hidden;
 }
 
+.like {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+}
+
 .duration {
   color: #6E6E6E
 }

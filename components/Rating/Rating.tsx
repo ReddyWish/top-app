@@ -5,7 +5,7 @@ import {useEffect, useState, KeyboardEvent} from 'react';
 import StarIcon from './star.svg';
 import cn from 'classnames';
 
-export const Rating = ({isEditable = 'false', rating, setRating, ...props}: RatingProps): JSX.Element => {
+export const Rating = ({isEditable = false, rating, setRating, ...props}: RatingProps): JSX.Element => {
   const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>));
 
   useEffect(() => {
