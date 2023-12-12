@@ -1,0 +1,13 @@
+.header {
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 5.4rem;
+}
