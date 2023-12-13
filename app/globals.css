@@ -25,5 +25,7 @@ body {
 	color: var(--black);
 	max-width: 100vw;
 	background: #F5F6F8;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
 }
 

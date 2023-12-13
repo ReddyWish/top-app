@@ -1,6 +1,31 @@
 .like {
+  border: none;
+  background: transparent;
   display: flex;
-  flex-direction: row;
-  align-items: end;
-  gap: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 4.8rem;
+  height: 4.8rem;
+  cursor: pointer;
+}
+
+.liked {
+  background-color: #303030;
+}
+
+.liked svg {
+  stroke: #FFFFFF;
+}
+
+.disliked {
+  background-color: transparent;
+}
+
+.disliked svg {
+  stroke: #303030;
 }
