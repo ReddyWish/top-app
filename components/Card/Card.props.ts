@@ -1,8 +1,10 @@
 import {ReactNode} from "react";
 
 export interface CardProps {
-  topic: string;
-  date: string;
+  topic?: string;
+  date?: string;
   title: string;
-  text: string;
+  body: string;
+  userId: number;
+  id: number
 }
