@@ -4,8 +4,13 @@ import {Like} from "@/components";
 import {Title} from "@/components";
 import {Text} from "@/components";
 import Image from "next/image";
+import Link from "next/link";
 
-export const Card = ({topic = 'frontend', date = '1 month ago', title, body}: CardProps): JSX.Element => {
+export const Card = ({topic = 'frontend', date = '1 month ago', title, body, id}: CardProps): JSX.Element => {
+  // return content.map((post: Post, index: number) => {
+  //   return <Card key={index} body={post.body} id={post.id} title={post.title} userId={post.userId}/>;
+  // });
+
   return (
     <div className={styles.card}>
       <div className={styles.image}>
@@ -34,7 +39,9 @@ export const Card = ({topic = 'frontend', date = '1 month ago', title, body}: Ca
 
       <div className={styles.footer}>
         <Text size='xs' className={styles.duration}>3 minutes</Text>
-        <button className={styles.button}>Read →</button>
+        <button className={styles.button}>
+          <Link href={`posts/${id}`}>Read →</Link>
+        </button>
       </div>
     </div>
   );
