@@ -1,5 +1,5 @@
 
-export interface CardProps {
+export interface PostPageProps {
   topic?: string;
   date?: string;
   title: string;
