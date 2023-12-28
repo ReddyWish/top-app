@@ -1,7 +1,5 @@
 import type {Metadata} from 'next';
 import {Open_Sans} from 'next/font/google';
-// import styles from '../page.module.css';
-import {LogoContextProvider} from "@/components/LabelContext/label.context";
 import {Header} from "@/components";
 import './globals.css';
 
@@ -20,9 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={sans.className}>
-    <LogoContextProvider>
       <Header/>
-    </LogoContextProvider>
     <div>
       {children}
     </div>

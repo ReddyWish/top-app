@@ -7,9 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const Card = ({topic = 'frontend', date = '1 month ago', title, body, id}: CardProps): JSX.Element => {
-  // return content.map((post: Post, index: number) => {
-  //   return <Card key={index} body={post.body} id={post.id} title={post.title} userId={post.userId}/>;
-  // });
 
   return (
     <div className={styles.card}>
